@@ -1,0 +1,22 @@
+body {
+  background: #1f1f1f;
+  color: #f0f0f0;
+  font-family: sans-serif;
+  padding: 20px;
+}
+#conversation {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+button {
+  font-size: 18px;
+  padding: 10px;
+  background: #0077ff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+p {
+  margin: 10px 0;
+}
