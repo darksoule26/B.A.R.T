@@ -31,6 +31,7 @@
 | Speech Output  | Web Speech API (SpeechSynthesis) |
 | Hosting        | Static site / Hugging Face Spaces / GitHub Pages |
 | Backend        |Python|
+|Smart Functions |Python|
 
 ---
 

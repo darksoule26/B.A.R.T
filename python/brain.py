@@ -2,7 +2,7 @@ import requests
 from smart_function import handle_smart_commands
 
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
-API_KEY = "your api key"
+API_KEY = "YOUR API KEY HERE"
 
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
