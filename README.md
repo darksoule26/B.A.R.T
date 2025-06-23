@@ -45,3 +45,11 @@
 
 ### 1. Clone the repo
 
+you will require a openai API key 
+
+go to https://openrouter.ai to get the api key and paste it in brain.py 
+
+install the required libraries and run the main.py 
+
+you can ask it any questions, create word files or report or presentation, etc..
+

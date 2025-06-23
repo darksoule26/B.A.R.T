@@ -1,6 +1,8 @@
 from Ear import listen
 from brain import think
 from Mouth import speak, stop_speaking
+from ai_doc_creator import generate_document_with_gpt
+from smart_function import handle_smart_commands
 import threading
 import random
 
@@ -24,8 +26,11 @@ def make_bart_joke():
         random.shuffle(_bart_lines)
     return _bart_lines.pop()
 
-def response_thread_function(response):
-    speak(response)
+def extract_topic(command: str) -> str:
+    for word in ["on", "about", "regarding", "related to"]:
+        if word in command:
+            return command.split(word)[-1].strip()
+    return "Untitled"
 
 def intro():
     startup_message = (
@@ -35,6 +40,9 @@ def intro():
         "Listening automatically, Sir."
     )
     speak(startup_message)
+
+def response_thread_function(response):
+    speak(response)
 
 def main():
     print("✅ Bart AI Booting...")
@@ -53,18 +61,33 @@ def main():
             continue
 
         print(f"You said: {user_input}")
+
         if user_input.lower() in ["exit", "stop", "quit"]:
             speak("AI core, Shutting down. Artificial Intelligence protocol Off. Goodbye, Sir.")
             break
 
-        response = think(user_input)
-        print(f"Bart says: {response}")
+        # 🔍 Step 1: Check for document or presentation generation
+        if "create" in user_input.lower() and "word" in user_input.lower():
+            topic = extract_topic(user_input)
+            response = generate_document_with_gpt("doc", topic)
 
+        elif "create" in user_input.lower() and "presentation" in user_input.lower():
+            topic = extract_topic(user_input)
+            response = generate_document_with_gpt("ppt", topic)
+
+        # 🧠 Step 2: Try smart PC command
+        else:
+            smart_response = handle_smart_commands(user_input)
+            if smart_response:
+                response = smart_response
+            else:
+                # 🤖 Step 3: Fallback to GPT (brain)
+                response = think(user_input)
+
+        print(f"Bart says: {response}")
         t = threading.Thread(target=response_thread_function, args=(response,))
         t.start()
         t.join()
 
 if __name__ == "__main__":
     main()
-
-
