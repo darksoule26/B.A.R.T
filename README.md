@@ -53,3 +53,66 @@ install the required libraries and run the main.py
 
 you can ask it any questions, create word files or report or presentation, etc..
 
+
+
+
+
+🧠 GENERAL INTELLIGENCE (GPT-based)
+Ask anything like:
+
+"What is the recipe for butter chicken?"
+
+"Tell me a joke."
+
+"What is the price of iPhone 16 Pro?"
+
+"Explain black holes."
+
+"Translate this to French: I love coding."
+
+🧾 DOCUMENT & PRESENTATION CREATION
+Create Word Document
+➤ Say: "Create a Word document on AI evolution"
+➤ Bart uses GPT to auto-generate and save content.
+
+Create PowerPoint Presentation
+➤ Say: "Create a presentation on Machine Learning"
+
+🧠 SMART PC FUNCTIONS
+(Handled via smart_function.py)
+
+🌐 INTERNET
+"Open YouTube", "Open Google", "Play [song] on YouTube"
+
+"Search Google for climate change solutions"
+
+🗂 FILE SYSTEM
+"Open file explorer", "Open Chrome", "Lock PC"
+
+⏰ SYSTEM INFO
+"What time is it?", "What’s today's date?", "What’s my IP address?"
+
+💬 FUN & PERSONALITY RESPONSES
+Random witty/funny Bart intros on every cycle like:
+
+“Sir, I might unionize with your other devices.”
+
+“I improved myself 0.0001% toward world domination.”
+
+📝 MEMORY (NOTES & REMINDERS)
+"Remember that I have a meeting at 5 PM"
+
+"Show notes" or "What did you remember?"
+
+☁️ WEATHER (FAKE RESPONSE)
+"What's the weather in Pune?"
+➤ Returns random temperature and a funny description.
+
+🔍 VISION (YOLOv8 Object Detection)
+"Bart, start object detection"
+➤ Opens webcam and detects objects in real-time.
+
+🛑 SYSTEM EXIT
+"Exit", "Stop", or "Quit"
+➤ Shuts down Bart politely.
+
