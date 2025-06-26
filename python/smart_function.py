@@ -9,6 +9,7 @@ from difflib import get_close_matches
 import json
 import random
 import re
+from bart_vision import start_object_detection
 
 cool_aliases = {
     "youtube": ["you tube", "yt", "video site", "utub", "utube"],
@@ -54,6 +55,11 @@ def fake_weather(location):
 
 def handle_smart_commands(command: str) -> str:
     command = command.lower()
+
+    # Inside handle_smart_commands() at the top after lowering command:
+    if "start object detection" in command or "object detection" in command:
+        start_object_detection()
+        return "Bart Vision activated, Sir. Scanning for objects now."
 
     if contains_exact_word(command, cool_aliases["reminder"]):
         if "remember" in command or "note" in command or "remind me" in command:
