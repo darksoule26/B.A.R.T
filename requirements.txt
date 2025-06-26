@@ -1,3 +1,30 @@
-pip install ultralytics opencv-python (8.3.159)
+vosk==0.3.45
+pyttsx3==2.90
+pygame==2.5.2
+requests==2.31.0
+pywhatkit==5.4
+python-docx==1.1.0
+python-pptx==0.6.21
+ultralytics==8.3.159
+opencv-python==4.9.0.80
+numpy==1.26.4
+```
 
-/many more 
+---
+
+### ✅ How to Install
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 💡 Notes:
+
+* `ultralytics==8.3.159` → Stable version with YOLOv8 detection support.
+* `vosk==0.3.45` → Offline speech recognition engine.
+* `opencv-python==4.9.0.80` → Tested with ultralytics and compatible with YOLOv8.
+* `pyttsx3==2.90` → Offline TTS engine, works without internet.
+* `python-docx` and `python-pptx` → For generating Word and PowerPoint files.
+
